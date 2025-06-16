@@ -48,6 +48,8 @@ def schedule_job_at_exporter_backend() -> None:
     Schedule a job at the exporter backend by sending a POST request with the export job details.
     :return:
     """
+    logging.info(f"Scheduling job at exporter backend for source system {os.environ.get('SOURCE_SYSTEM_ID')} and "
+                 f"export type: {os.environ.get("EXPORT_TYPE")}" )
     header = {"Authorization": "Bearer " + get_token()}
     request_json = get_request_json()
     url = f"https://{os.environ.get('DISSCO_DOMAIN')}/api/data-export/v1/schedule"
