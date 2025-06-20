@@ -1,4 +1,4 @@
-# Set line lenght for both linter and formatter for Ruff (currently ignored by pre-commit)
+# Set line length for both linter and formatter for Ruff (currently ignored by pre-commit)
 line-length = 120
 
 [format]
